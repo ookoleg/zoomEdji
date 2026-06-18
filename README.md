@@ -1,6 +1,8 @@
 This app will fully automatically find a gmail message with latest zoom meeting link and launch it at the time u want it to launch.
 I'm making this app for my grandma so the time will be 6pm but u can easily change it if you need to
 
+I also included auto installation of packages that will be needed, no need to worry about requirements :)
+
 APIs being used: 
 Gmail API from google (https://console.cloud.google.com/apis/api/gmail.googleapis.com/metrics?project=lofty-proton-473103-j4)
 
