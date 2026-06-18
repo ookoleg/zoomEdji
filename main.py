@@ -2,11 +2,22 @@ import os
 import base64
 import re
 import webbrowser
+import subprocess
+import sys
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
 from googleapiclient.errors import HttpError
+
+required_packages = {
+    "google-api-python-client",
+    "google-auth-oauthlib",
+    "google-auth",
+}
+
+for package in required_packages:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 script_dir = os.path.dirname(os.path.abspath(__file__))
